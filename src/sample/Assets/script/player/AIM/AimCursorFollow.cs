@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class AimCursorFollow : MonoBehaviour {
 
-	public GameObject weapon;
+    public GameObject weapon;
+	public GameObject FireBulletGenerator;
 	public GameObject Cursor;
 
 	public float angle;
@@ -29,10 +30,12 @@ public class AimCursorFollow : MonoBehaviour {
 	}
 
 	void SetAngle() {
-        // calc angle from object position and cursor position
-        angle = Vector.Rad2Deg(Vector.AngleBetweenTwo2DVectorsInRad(gameObject.transform.position, Cursor.transform.position));
+        Vector2 from = gameObject.transform.position;
+        Vector2 to = Cursor.transform.position;
+        Quaternion angle = Vector.PointVectorTo(from, to);
 
-		weapon.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        weapon.transform.rotation = angle;
+		FireBulletGenerator.transform.rotation = angle;
 	}
 
 	Vector2 CalcCursorPosition(Vector2 mousePosition) {

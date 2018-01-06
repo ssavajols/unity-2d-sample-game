@@ -1,39 +1,32 @@
 ﻿<Properties StartupConfiguration="{573D4E8A-51F7-95E1-F0EC-85BE510A51B8}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/script/player/AIM/AimCursorFollow.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/script/weapon/Drops/DropHealth.cs">
     <Files>
-      <File FileName="Assets/script/player/controls/Controller.cs" Line="18" Column="2" />
-      <File FileName="Assets/script/player/AIM/AimCursorFollow.cs" Line="21" Column="9" />
-      <File FileName="Assets/script/tools/math/Angle.cs" Line="15" Column="3" />
-      <File FileName="Assets/script/player/controls/PlayerMover.cs" Line="20" Column="21" />
-      <File FileName="Assets/script/camera/FollowPlayer.cs" Line="28" Column="51" />
-      <File FileName="Assets/script/camera/FollowPlayerAndCursor.cs" Line="25" Column="10" />
-      <File FileName="Assets/script/tools/math/Vector.cs" Line="27" Column="78" />
-      <File FileName="Assets/script/configuration/Keymap.cs" Line="8" Column="42" />
+      <File FileName="Assets/script/player/controls/PlayerActions.cs" Line="71" Column="56" />
+      <File FileName="Assets/script/weapon/FireBulletGenerator.cs" Line="58" Column="41" />
+      <File FileName="Assets/script/Ennemies/EnnemyActions.cs" Line="90" Column="9" />
+      <File FileName="Assets/script/weapon/Bullets/fireBulletSimple.cs" Line="17" Column="3" />
+      <File FileName="Assets/script/configuration/weapon/WeaponModel.cs" Line="12" Column="31" />
+      <File FileName="Assets/script/configuration/weapon/WeaponTypes.cs" Line="7" Column="40" />
+      <File FileName="Assets/script/configuration/weapon/WeaponCollection.cs" Line="79" Column="30" />
+      <File FileName="Assets/script/weapon/Bullets/fireKnife.cs" Line="35" Column="29" />
+      <File FileName="Assets/script/weapon/Bullets/fireRocket.cs" Line="6" Column="5" />
+      <File FileName="Assets/script/Ennemies/EnnemyInit.cs" Line="36" Column="14" />
+      <File FileName="Assets/script/GUI/GuiDamageCounter.cs" Line="52" Column="31" />
+      <File FileName="Assets/script/configuration/Ennemy/EnnemyCollection.cs" Line="13" Column="43" />
+      <File FileName="Assets/script/configuration/Ennemy/EnnemyModel.cs" Line="10" Column="40" />
+      <File FileName="Assets/script/configuration/weapon/WeaponNameModel.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/configuration/Ennemy/EnnemyNameModel.cs" Line="2" Column="1" />
+      <File FileName="Assets/script/Ennemies/EnnemyInitGun.cs" Line="12" Column="1" />
+      <File FileName="Assets/script/Ennemies/EnnemyInitShotgun.cs" Line="12" Column="1" />
+      <File FileName="Assets/script/IA/EnnemyAI.cs" Line="13" Column="24" />
+      <File FileName="Assets/script/Ennemies/EnnemyMover.cs" Line="36" Column="43" />
+      <File FileName="Assets/script/GUI/GuiHealth.cs" Line="19" Column="1" />
+      <File FileName="Assets/script/GUI/GuiArmor.cs" Line="11" Column="22" />
+      <File FileName="Assets/script/weapon/Drops/DropWeapon.cs" Line="68" Column="44" />
+      <File FileName="Assets/script/weapon/Drops/DropArmor.cs" Line="40" Column="64" />
+      <File FileName="Assets/script/weapon/Drops/DropHealth.cs" Line="1" Column="4" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="sample" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="script" expanded="True">
-                <Node name="camera" expanded="True" />
-                <Node name="configuration" expanded="True" />
-                <Node name="player" expanded="True">
-                  <Node name="AIM" expanded="True">
-                    <Node name="AimCursorFollow.cs" selected="True" />
-                  </Node>
-                  <Node name="controls" expanded="True" />
-                </Node>
-                <Node name="tools" expanded="True">
-                  <Node name="math" expanded="True" />
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

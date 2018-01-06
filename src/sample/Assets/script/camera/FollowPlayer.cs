@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour {
 
-    public GameObject player;
+    public GameObject target;
     public float maxDistanceDelta = 0.8f;
 
 	// Use this for initialization
@@ -18,12 +18,12 @@ public class FollowPlayer : MonoBehaviour {
 	}
 
     void MoveCameraToPlayer() {
-        if( player == null ) {
+        if( target == null ) {
             return;
         }
 
         Vector3 cameraPosition = transform.position;
-        Vector3 playerPosition= player.transform.position;
+        Vector3 playerPosition= target.transform.position;
 
         Vector3 newPosition = Vector3.MoveTowards(
                                         cameraPosition, 

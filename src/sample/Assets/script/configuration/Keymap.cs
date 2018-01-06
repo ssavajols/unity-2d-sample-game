@@ -2,38 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Keymap : MonoBehaviour
+namespace Game.Configuration
 {
+    public class Keymap
+    {
 
-    static public KeyCode UP = KeyCode.Z;
-    static public KeyCode DOWN = KeyCode.S;
-    static public KeyCode LEFT = KeyCode.Q;
-    static public KeyCode RIGHT = KeyCode.D;
+        static public KeyCode UP = KeyCode.Z;
+        static public KeyCode DOWN = KeyCode.S;
+        static public KeyCode LEFT = KeyCode.Q;
+        static public KeyCode RIGHT = KeyCode.D;
+        static public KeyCode FIRE = KeyCode.Mouse0;
+        static public KeyCode ALT_FIRE = KeyCode.Mouse1;
+        static public KeyCode ACTIVATE = KeyCode.E;
+        static public KeyCode SELECT_1 = KeyCode.Ampersand;
+        static public KeyCode SELECT_2 = KeyCode.Alpha2;
+        static public KeyCode SELECT_3 = KeyCode.DoubleQuote;
+        static public KeyCode SELECT_4 = KeyCode.Quote;
 
-	// Use this for initialization
-	void Start ()
-	{
-        setInitialKeys();
-    }
-    
-	// Update is called once per frame
-	void Update ()
-	{
-		
-	}
-
-    void setInitialKeys() {
-        updateKey("UP", KeyCode.UpArrow);
-        updateKey("DOWN", KeyCode.DownArrow);
-        updateKey("LEFT", KeyCode.LeftArrow);
-        updateKey("RIGHT", KeyCode.RightArrow);
-    }
-
-    void updateKey(string keyName, KeyCode keyCode) {
-        var prop = this.GetType().GetProperty(keyName);
-
-        if( prop != null ) {
-            prop.SetValue(this, keyCode, null);    
-        }
     }
 }
