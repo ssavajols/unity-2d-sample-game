@@ -72,9 +72,6 @@ public class PlayerActions : MonoBehaviour {
         int reduceDamaged = Mathf.RoundToInt( damage - ((float)damage *  armorPercent));
         Player.Health -= Mathf.Min(100, Mathf.Max(0, reduceDamaged));
         Player.Armor = Mathf.Min(100, Mathf.Max(0, Player.Armor - reduceDamaged));
-
-        Debug.Log(armorPercent);
-        Debug.Log(reduceDamaged);
     }
 
 }

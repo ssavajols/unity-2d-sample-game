@@ -5,11 +5,10 @@ using Game.Configuration.Weapon;
 
 namespace Game.Configuration.Ennemy
 {
-    public class EnnemyModel
+    public static class EnnemyNameModel
     {
-        public string Name;
-        public int Health;
-        public WeaponModel Weapon;
+        public static string GUN = "Gun";
+        public static string SHOTGUN = "Shotgun";
     }
 
 }

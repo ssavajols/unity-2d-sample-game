@@ -137,6 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cd254dd4ddf44ed98eabe226a1be7a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DeadBody: {fileID: 1900280522061802, guid: bc91e787d537547c084959429013d499, type: 2}
   fireBulletGenerator: {fileID: 1218254780600794}
   MoverSpeed: 1
 --- !u!114 &114113622349875466
@@ -153,7 +154,6 @@ MonoBehaviour:
   Bullet: {fileID: 1269067095728838, guid: 2192f47f0bf934cb4898ead99d5cce4d, type: 2}
   Rocket: {fileID: 1220066196600090, guid: daf3dde480b564d208acdb509bd12b83, type: 2}
   Knife: {fileID: 1331027320387410, guid: a7ebd51eddf1c4c658696dac55c6119b, type: 2}
-  BulletContainer: {fileID: 0}
 --- !u!212 &212811399139971906
 SpriteRenderer:
   m_ObjectHideFlags: 1

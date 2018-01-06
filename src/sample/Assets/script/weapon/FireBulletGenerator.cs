@@ -3,21 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using Game.Configuration.Player;
 using Game.Configuration.Weapon;
+using Game.Configuration;
 
 public class FireBulletGenerator : MonoBehaviour {
 
     public GameObject Bullet;
     public GameObject Rocket;
     public GameObject Knife;
-    public GameObject BulletContainer;
+
+    GameObject BulletContainer;
 
 	void Start () {
         GetBulletContainer();
 	}
 	
     void GetBulletContainer() {
-        if( BulletContainer == null ) {
+        if (BulletContainer != null) { return; }
+
+        if( GameObjectsContainer.Bullets == null ) {
             BulletContainer = transform.parent.gameObject;
+        } else {
+            BulletContainer = GameObjectsContainer.Bullets;
         }
     }
 

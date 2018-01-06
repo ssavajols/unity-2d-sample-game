@@ -8,6 +8,7 @@ using Game.Configuration;
 public class EnnemyActions : MonoBehaviour
 {
 
+    public GameObject DeadBody;
     public GameObject fireBulletGenerator;
 	public bool CanTriggerFire;
     public int Health;
@@ -106,9 +107,16 @@ public class EnnemyActions : MonoBehaviour
 
     void Die() {
         if ( Health < 1 ) {
+            AddDeadBody();
             Destroy(gameObject);
         }
     }
+
+    void AddDeadBody() {
+        if (DeadBody) {
+            GameObject db = Instantiate(DeadBody, transform.position, Quaternion.identity, transform.parent);
+        }
+    } 
 
     public void ApplyDamage(WeaponModel weapon)
     {

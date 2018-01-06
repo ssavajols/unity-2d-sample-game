@@ -5,6 +5,7 @@ using Game.Configuration.Ennemy;
 public class EnnemyInit: MonoBehaviour
 {
 
+    public GameObject DeadBody;
     public GameObject fireBulletGenerator;
     public float MoverSpeed = 0.1f;
     
@@ -27,6 +28,7 @@ public class EnnemyInit: MonoBehaviour
         EnnemyActions = gameObject.AddComponent<EnnemyActions>();
         EnnemyActions.fireBulletGenerator = fireBulletGenerator;
         EnnemyActions.Ennemy = Ennemy;
+        EnnemyActions.DeadBody = DeadBody;
     }
 
     protected void AddSortByYScript() {
