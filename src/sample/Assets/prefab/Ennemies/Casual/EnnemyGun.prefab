@@ -11,22 +11,6 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1275894020095600}
   m_IsPrefabParent: 1
---- !u!1 &1218254780600794
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4077032508797560}
-  - component: {fileID: 114113622349875466}
-  m_Layer: 0
-  m_Name: fireBuletteGenerator
-  m_TagString: EnnemyBullet
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1275894020095600
 GameObject:
   m_ObjectHideFlags: 0
@@ -40,6 +24,22 @@ GameObject:
   m_Layer: 0
   m_Name: EnnemyGun
   m_TagString: Ennemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1603712730651854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4363345791543308}
+  - component: {fileID: 114667072742573350}
+  m_Layer: 0
+  m_Name: fireBuletteGenerator
+  m_TagString: EnnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,19 +60,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4077032508797560
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1218254780600794}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.036728993}
-  m_LocalScale: {x: 10, y: 10, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4086257795203130}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4086257795203130
 Transform:
   m_ObjectHideFlags: 1
@@ -84,9 +71,22 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4540428861081642}
-  - {fileID: 4077032508797560}
+  - {fileID: 4363345791543308}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4363345791543308
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1603712730651854}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5, y: 0, z: -0.036728993}
+  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4086257795203130}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4540428861081642
 Transform:
@@ -138,14 +138,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeadBody: {fileID: 1900280522061802, guid: bc91e787d537547c084959429013d499, type: 2}
-  fireBulletGenerator: {fileID: 1218254780600794}
+  fireBulletGenerator: {fileID: 1603712730651854}
   MoverSpeed: 1
---- !u!114 &114113622349875466
+--- !u!114 &114667072742573350
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1218254780600794}
+  m_GameObject: {fileID: 1603712730651854}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8f29c781e29d42b59d9dbeec0ef5b70, type: 3}

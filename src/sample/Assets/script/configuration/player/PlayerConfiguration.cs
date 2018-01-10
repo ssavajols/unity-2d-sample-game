@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Game.Configuration.Weapon;
+using Game.Data;
 
 namespace Game.Configuration.Player {
     public class PlayerConfiguration {
@@ -45,10 +46,10 @@ namespace Game.Configuration.Player {
         }
 
         private static bool hasWeapon(WeaponModel Weapon) {
-            bool hasGun = Weapon.Name == WeaponNameModel.GUN && Player.hasGun;
-            bool hasShotgun = Weapon.Name == WeaponNameModel.SHOTGUN && Player.hasShotgun;
-            bool hasGatling = Weapon.Name == WeaponNameModel.GATLING && Player.hasGatling;
-            bool hasRocketLauncher = Weapon.Name == WeaponNameModel.ROCKET_LAUNCHER && Player.hasRocketLauncher;
+            bool hasGun = Weapon.Weapon == WeaponCollection.WeaponList.GUN && Player.hasGun;
+            bool hasShotgun = Weapon.Weapon == WeaponCollection.WeaponList.SHOTGUN && Player.hasShotgun;
+            bool hasGatling = Weapon.Weapon == WeaponCollection.WeaponList.GATLING && Player.hasGatling;
+            bool hasRocketLauncher = Weapon.Weapon == WeaponCollection.WeaponList.ROCKET_LAUNCHER && Player.hasRocketLauncher;
 
             return hasGun || hasShotgun || hasGatling || hasRocketLauncher;
         }

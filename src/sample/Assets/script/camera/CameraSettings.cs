@@ -16,6 +16,6 @@ public class CameraSettings : MonoBehaviour
 
     void SetResolution(int TargetWidth, int TargetHeight, bool TargetFullscreen)
     {
-        global::UnityEngine.Screen.SetResolution(TargetWidth, TargetHeight, TargetFullscreen);
+        Screen.SetResolution(TargetWidth, TargetHeight, TargetFullscreen);
     }
 }

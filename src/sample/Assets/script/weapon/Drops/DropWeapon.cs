@@ -1,10 +1,9 @@
 using UnityEngine;
 using System.Collections;
-using Game.Weapon;
 using Game.Configuration;
 using Game.Configuration.Player;
 using Game.Configuration.Weapon;
-
+using Game.Data;
 namespace Game.Weapon
 {
     public class DropWeapon : MonoBehaviour
@@ -48,41 +47,41 @@ namespace Game.Weapon
         }
 
         protected void AddAmmo() {
-            if (W.Name == WeaponNameModel.GUN)
+            if (W.Name == WeaponCollection.GUN.Name)
             {
                 Player.GunAmmo += Amount;
             }
 
-            if (W.Name == WeaponNameModel.SHOTGUN)
+            if (W.Name == WeaponCollection.SHOTGUN.Name)
             {
                 Player.ShotgunAmmo += Amount;
             }
 
-            if (W.Name == WeaponNameModel.GATLING)
+            if (W.Name == WeaponCollection.GATLING.Name)
             {
                 Player.GatlingAmmo += Amount;
             }
 
-            if (W.Name == WeaponNameModel.ROCKET_LAUNCHER)
+            if (W.Name == WeaponCollection.ROCKET_LAUNCHER.Name)
             {
                 Player.RocketAmmo += Amount;
             }
         }
 
         protected void AddWeapon() {
-            if ( W.Name == WeaponNameModel.GUN ) {
+            if ( W.Name == WeaponCollection.GUN.Name ) {
                 Player.hasGun = true;
             }
 
-            if ( W.Name == WeaponNameModel.SHOTGUN ) {
+            if ( W.Name == WeaponCollection.SHOTGUN.Name ) {
                 Player.hasShotgun = true;
             }
 
-            if ( W.Name == WeaponNameModel.GATLING ) {
+            if ( W.Name == WeaponCollection.GATLING.Name ) {
                 Player.hasGatling = true;
             }
 
-            if ( W.Name == WeaponNameModel.ROCKET_LAUNCHER ) {
+            if ( W.Name == WeaponCollection.ROCKET_LAUNCHER.Name ) {
                 Player.hasRocketLauncher = true;
             }
                     

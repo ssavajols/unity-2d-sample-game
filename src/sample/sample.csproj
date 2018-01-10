@@ -309,25 +309,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\data\ColorList.cs" />
+    <Compile Include="Assets\data\EnnemyCollection.cs" />
+    <Compile Include="Assets\data\SceneCollection.cs" />
+    <Compile Include="Assets\data\WeaponCollection.cs" />
     <Compile Include="Assets\script\camera\CameraSettings.cs" />
     <Compile Include="Assets\script\camera\FollowPlayer.cs" />
     <Compile Include="Assets\script\camera\FollowPlayerAndCursor.cs" />
-    <Compile Include="Assets\script\configuration\Ennemy\EnnemyCollection.cs" />
     <Compile Include="Assets\script\configuration\Ennemy\EnnemyModel.cs" />
-    <Compile Include="Assets\script\configuration\Ennemy\EnnemyNameModel.cs" />
     <Compile Include="Assets\script\configuration\GameObjectsContainer.cs" />
     <Compile Include="Assets\script\configuration\Global.cs" />
     <Compile Include="Assets\script\configuration\Keymap.cs" />
     <Compile Include="Assets\script\configuration\Layer.cs" />
+    <Compile Include="Assets\script\configuration\objects\GameObjectContainer.cs" />
     <Compile Include="Assets\script\configuration\player\Player.cs" />
     <Compile Include="Assets\script\configuration\player\PlayerConfiguration.cs" />
-    <Compile Include="Assets\script\configuration\Scene\SceneCollection.cs" />
     <Compile Include="Assets\script\configuration\Scene\SceneModel.cs" />
     <Compile Include="Assets\script\configuration\Tag.cs" />
-    <Compile Include="Assets\script\configuration\weapon\WeaponCollection.cs" />
     <Compile Include="Assets\script\configuration\weapon\WeaponModel.cs" />
-    <Compile Include="Assets\script\configuration\weapon\WeaponNameModel.cs" />
-    <Compile Include="Assets\script\configuration\weapon\WeaponTypes.cs" />
     <Compile Include="Assets\script\Ennemies\EnnemyActions.cs" />
     <Compile Include="Assets\script\Ennemies\EnnemyInit.cs" />
     <Compile Include="Assets\script\Ennemies\EnnemyInitGun.cs" />
@@ -342,13 +341,14 @@
     <Compile Include="Assets\script\GUI\GuiShotgunAmmo.cs" />
     <Compile Include="Assets\script\GUI\GuiText.cs" />
     <Compile Include="Assets\script\IA\EnnemyAI.cs" />
-    <Compile Include="Assets\script\objects\GameObjectContainer.cs" />
     <Compile Include="Assets\script\player\AIM\AimCursorFollow.cs" />
     <Compile Include="Assets\script\player\controls\Controller.cs" />
     <Compile Include="Assets\script\player\controls\PlayerActions.cs" />
     <Compile Include="Assets\script\player\controls\PlayerInit.cs" />
     <Compile Include="Assets\script\player\controls\PlayerMover.cs" />
-    <Compile Include="Assets\script\Scene\LoadAsync.cs" />
+    <Compile Include="Assets\script\Scene\SceneLoader.cs" />
+    <Compile Include="Assets\script\Scene\TriggerLoadSceneAsync.cs" />
+    <Compile Include="Assets\script\Scene\TriggerUnloadSceneAsync.cs" />
     <Compile Include="Assets\script\tools\Cooldown.cs" />
     <Compile Include="Assets\script\tools\Debounce.cs" />
     <Compile Include="Assets\script\tools\EnableOnViewport.cs" />

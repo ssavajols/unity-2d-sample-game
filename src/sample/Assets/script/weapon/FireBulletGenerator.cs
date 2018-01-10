@@ -4,6 +4,7 @@ using UnityEngine;
 using Game.Configuration.Player;
 using Game.Configuration.Weapon;
 using Game.Configuration;
+using Game.Data;
 
 public class FireBulletGenerator : MonoBehaviour {
 
@@ -13,7 +14,7 @@ public class FireBulletGenerator : MonoBehaviour {
 
     GameObject BulletContainer;
 
-	void Start () {
+	void Update () {
         GetBulletContainer();
 	}
 	
@@ -56,17 +57,17 @@ public class FireBulletGenerator : MonoBehaviour {
         fireBullet.tag = tag;
         fireBullet.transform.rotation = rotation;
 
-        if (weapon.Type == WeaponTypes.CQC)
+        if (weapon.Type == WeaponCollection.WeaponTypes.CQC)
         {
             fireBullet.GetComponent<global::fireKnife>().Weapon = weapon;
         }
 
-        if (weapon.Type == WeaponTypes.BULLET)
+        if (weapon.Type == WeaponCollection.WeaponTypes.BULLET)
         {
             fireBullet.GetComponent<global::fireBulletSimple>().Weapon = weapon;
         }
 
-        if (weapon.Type == WeaponTypes.ROCKET)
+        if (weapon.Type == WeaponCollection.WeaponTypes.ROCKET)
         {
             fireBullet.GetComponent<global::fireRocket>().Weapon = weapon;
         }
@@ -74,15 +75,15 @@ public class FireBulletGenerator : MonoBehaviour {
     }
 
     public void Fire(WeaponModel weapon) {
-        if ( weapon.Type == WeaponTypes.CQC ) {
+        if ( weapon.Type == WeaponCollection.WeaponTypes.CQC ) {
             FireCQC(weapon);
         }
 
-        if ( weapon.Type == WeaponTypes.BULLET ) {
+        if ( weapon.Type == WeaponCollection.WeaponTypes.BULLET ) {
             FireBullet(weapon);
         }
 
-        if ( weapon.Type == WeaponTypes.ROCKET ) {
+        if ( weapon.Type == WeaponCollection.WeaponTypes.ROCKET ) {
             FireRocket(weapon);
         }
     }

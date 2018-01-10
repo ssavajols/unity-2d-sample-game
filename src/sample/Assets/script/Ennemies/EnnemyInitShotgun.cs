@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-using Game.Configuration.Ennemy;
+using Game.Data;
 
 public class EnnemyInitShotgun : EnnemyInit
 {

@@ -13,7 +13,7 @@ public class GuiGunAmmo : GuiText
 
     void UpdateAmmo()
     {
-        text.text = "Gun : " + Game.Configuration.Player.Player.GunAmmo.ToString();
+        text.text = Game.Data.WeaponCollection.GUN.Name + " : " + Game.Configuration.Player.Player.GunAmmo.ToString();
     }
 }
 

@@ -13,7 +13,7 @@ public class GuiGatlingAmmo : GuiText
 
     void UpdateAmmo()
     {
-        text.text = "Gatling : " + Game.Configuration.Player.Player.GatlingAmmo.ToString();
+        text.text = Game.Data.WeaponCollection.GATLING.Name + " : " + Game.Configuration.Player.Player.GatlingAmmo.ToString();
     }
 }
 

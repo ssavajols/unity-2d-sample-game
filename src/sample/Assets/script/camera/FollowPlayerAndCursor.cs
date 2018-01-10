@@ -9,15 +9,17 @@ public class FollowPlayerAndCursor : MonoBehaviour {
     public GameObject cursor;
     public float maxDistanceDelta = 0.8f;
 
-    	// Use this for initialization
-	void Start () {
-        target = PlayerConfiguration.CurrentPlayer;
-	}
-
     // Update is called once per frame
     void Update()
     {
+        if ( target == null ) {
+            SetTarget(PlayerConfiguration.CurrentPlayer);    
+        }
         MoveCameraToPlayer();
+    }
+
+    public void SetTarget(GameObject t) {
+        target = t;
     }
 
     void MoveCameraToPlayer()
@@ -31,7 +33,7 @@ public class FollowPlayerAndCursor : MonoBehaviour {
             return;
         }
 
-        Vector3 cameraPosition= transform.position;
+        Vector3 cameraPosition = transform.position;
         Vector3 playerPositionNormalized  = Vector.GetNormalizedPointBetweenTwo3DVectors(target.transform.position, cursor.transform.position, 1);
 
         Vector3 newPosition = Vector3.MoveTowards(

@@ -13,7 +13,7 @@ public class GuiRocketAmmo : GuiText
 
     void UpdateAmmo()
     {
-        text.text = "Rocket : " + Game.Configuration.Player.Player.RocketAmmo.ToString();
+        text.text = Game.Data.WeaponCollection.ROCKET_LAUNCHER.Name + " : " + Game.Configuration.Player.Player.RocketAmmo.ToString();
     }
 }
 
